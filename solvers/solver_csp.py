@@ -25,9 +25,4 @@ def solve(number_queens):
             list_queens.append(q.Value())
 
     solver.EndSearch()
-    print(list_queens)
-    print("failures: ", solver.Failures())
-    print("branches: ", solver.Branches())
-    print("WallTime: ", solver.WallTime(), "ms")
-
     return list_queens
