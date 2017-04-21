@@ -1,4 +1,4 @@
-from draw_qboard import draw_board
+import nqueens_csp
 
-queens = [0, 2, 6, 4, 7, 1, 5, 3]
-draw_board(queens)
+if __name__ == '__main__':
+    nqueens_csp.solve(30)
