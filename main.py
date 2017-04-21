@@ -1,6 +1,8 @@
-import nqueens_csp
-from heuristics import *
+import solvers.solver_minimum_conflicts
+import time
 
-if __name__ == '__main__':
-    queens = nqueens_csp.solve(1000)
-    print(queens)
+start = time.time()
+print(solvers.solver_minimum_conflicts.solve(500))
+end = time.time()
+print(end - start)
+

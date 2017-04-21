@@ -1,7 +1,9 @@
 from ortools.constraint_solver import pywrapcp
 
 
-def solve(n):
+def solve(number_queens):
+    n = number_queens
+
     # Create the solver
     solver = pywrapcp.Solver("n-queens")
 
@@ -23,6 +25,9 @@ def solve(n):
             list_queens.append(q.Value())
 
     solver.EndSearch()
-    print("Time: ", solver.WallTime(), "ms")
+    print(list_queens)
+    print("failures: ", solver.Failures())
+    print("branches: ", solver.Branches())
+    print("WallTime: ", solver.WallTime(), "ms")
 
     return list_queens
